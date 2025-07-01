@@ -16,6 +16,9 @@ namespace library_support_system
         private int bookPanelOriginalHeight;
         private int accountPanelOriginalHeight;
         private int rentalPanelOriginalHeight;
+        private Control previousScreen = null; // 이전 화면 저장
+private bool isHome = true;            // 현재 홈 상태 여부
+
 
         public home()
         {
@@ -92,10 +95,9 @@ namespace library_support_system
             else
                 panelToToggle.Height = 0;
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void home_button_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void home_label_Click(object sender, EventArgs e)

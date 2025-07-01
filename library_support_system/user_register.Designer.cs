@@ -79,7 +79,7 @@
             this.exit_button.BackColor = System.Drawing.Color.Crimson;
             this.exit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exit_button.ForeColor = System.Drawing.Color.Red;
-            this.exit_button.Image = global::library_support_system.Properties.Resources.free_icon_power_switch_4139573__1_;
+            this.exit_button.Image = global::library_support_system.Properties.Resources.exit_logo1;
             this.exit_button.Location = new System.Drawing.Point(426, 0);
             this.exit_button.Name = "exit_button";
             this.exit_button.Size = new System.Drawing.Size(54, 54);
@@ -89,7 +89,7 @@
             // 
             // deu_logo
             // 
-            this.deu_logo.Image = global::library_support_system.Properties.Resources.Clipboard___2025년_6월_30일_오후_1시_48분;
+            this.deu_logo.Image = global::library_support_system.Properties.Resources.deu_logo;
             this.deu_logo.Location = new System.Drawing.Point(150, 250);
             this.deu_logo.Name = "deu_logo";
             this.deu_logo.Size = new System.Drawing.Size(174, 182);

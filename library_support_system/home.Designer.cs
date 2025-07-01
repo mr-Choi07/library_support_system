@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(home));
             this.home_label = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -47,13 +48,16 @@
             this.home_picturebox = new System.Windows.Forms.PictureBox();
             this.home_button = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.labelCurrentMenu2 = new System.Windows.Forms.Label();
             this.exit_button = new System.Windows.Forms.Button();
             this.top_panel = new System.Windows.Forms.Panel();
             this.labelCurrentMenu1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.main_panel = new System.Windows.Forms.Panel();
-            this.labelCurrentMenu2 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.search_button = new System.Windows.Forms.Button();
+            this.search_textbox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.rental_panel.SuspendLayout();
             this.account_panel.SuspendLayout();
@@ -63,6 +67,7 @@
             this.panel3.SuspendLayout();
             this.top_panel.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.main_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // home_label
@@ -73,7 +78,7 @@
             this.home_label.ForeColor = System.Drawing.SystemColors.Control;
             this.home_label.Location = new System.Drawing.Point(0, 0);
             this.home_label.Name = "home_label";
-            this.home_label.Size = new System.Drawing.Size(88, 53);
+            this.home_label.Size = new System.Drawing.Size(88, 32);
             this.home_label.TabIndex = 0;
             this.home_label.Text = "도서관리\r\n시스템";
             this.home_label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -259,7 +264,7 @@
             // 
             this.home_picturebox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.home_picturebox.Enabled = false;
-            this.home_picturebox.Image = global::library_support_system.Properties.Resources.Clipboard___2025년_6월_30일_오후_1시_48분;
+            this.home_picturebox.Image = global::library_support_system.Properties.Resources.deu_logo;
             this.home_picturebox.Location = new System.Drawing.Point(82, 0);
             this.home_picturebox.Name = "home_picturebox";
             this.home_picturebox.Size = new System.Drawing.Size(68, 55);
@@ -280,8 +285,9 @@
             this.home_button.Name = "home_button";
             this.home_button.Size = new System.Drawing.Size(150, 55);
             this.home_button.TabIndex = 9;
+            this.home_button.Text = "bb";
             this.home_button.UseVisualStyleBackColor = false;
-            this.home_button.Click += new System.EventHandler(this.button2_Click);
+            this.home_button.Click += new System.EventHandler(this.home_button_Click);
             // 
             // panel3
             // 
@@ -294,12 +300,23 @@
             this.panel3.Size = new System.Drawing.Size(1118, 53);
             this.panel3.TabIndex = 2;
             // 
+            // labelCurrentMenu2
+            // 
+            this.labelCurrentMenu2.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelCurrentMenu2.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelCurrentMenu2.Location = new System.Drawing.Point(7, 1);
+            this.labelCurrentMenu2.Name = "labelCurrentMenu2";
+            this.labelCurrentMenu2.Size = new System.Drawing.Size(175, 52);
+            this.labelCurrentMenu2.TabIndex = 2;
+            this.labelCurrentMenu2.Text = "홈";
+            this.labelCurrentMenu2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // exit_button
             // 
             this.exit_button.BackColor = System.Drawing.Color.Crimson;
             this.exit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exit_button.ForeColor = System.Drawing.Color.Red;
-            this.exit_button.Image = global::library_support_system.Properties.Resources.free_icon_power_switch_4139573__1_;
+            this.exit_button.Image = global::library_support_system.Properties.Resources.exit_logo1;
             this.exit_button.Location = new System.Drawing.Point(1061, 1);
             this.exit_button.Name = "exit_button";
             this.exit_button.Size = new System.Drawing.Size(54, 52);
@@ -348,22 +365,41 @@
             // 
             // main_panel
             // 
+            this.main_panel.Controls.Add(this.search_button);
+            this.main_panel.Controls.Add(this.search_textbox);
+            this.main_panel.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.main_panel.Location = new System.Drawing.Point(0, 0);
             this.main_panel.Name = "main_panel";
             this.main_panel.Size = new System.Drawing.Size(1115, 627);
             this.main_panel.TabIndex = 0;
             this.main_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.main_panel_Paint);
             // 
-            // labelCurrentMenu2
+            // contextMenuStrip1
             // 
-            this.labelCurrentMenu2.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.labelCurrentMenu2.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelCurrentMenu2.Location = new System.Drawing.Point(7, 1);
-            this.labelCurrentMenu2.Name = "labelCurrentMenu2";
-            this.labelCurrentMenu2.Size = new System.Drawing.Size(175, 52);
-            this.labelCurrentMenu2.TabIndex = 2;
-            this.labelCurrentMenu2.Text = "홈";
-            this.labelCurrentMenu2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // search_button
+            // 
+            this.search_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.search_button.Image = global::library_support_system.Properties.Resources.search_logo;
+            this.search_button.Location = new System.Drawing.Point(806, 282);
+            this.search_button.Name = "search_button";
+            this.search_button.Size = new System.Drawing.Size(44, 41);
+            this.search_button.TabIndex = 9;
+            this.search_button.UseVisualStyleBackColor = true;
+            // 
+            // search_textbox
+            // 
+            this.search_textbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.search_textbox.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.search_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.search_textbox.Font = new System.Drawing.Font("나눔고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.search_textbox.Location = new System.Drawing.Point(271, 282);
+            this.search_textbox.Multiline = true;
+            this.search_textbox.Name = "search_textbox";
+            this.search_textbox.Size = new System.Drawing.Size(529, 41);
+            this.search_textbox.TabIndex = 8;
             // 
             // home
             // 
@@ -396,6 +432,8 @@
             this.top_panel.ResumeLayout(false);
             this.top_panel.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.main_panel.ResumeLayout(false);
+            this.main_panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -427,6 +465,9 @@
         private System.Windows.Forms.Label labelCurrentMenu1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelCurrentMenu2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button search_button;
+        private System.Windows.Forms.TextBox search_textbox;
     }
 }
 

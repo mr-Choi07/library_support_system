@@ -63,9 +63,9 @@ namespace library_support_system.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap Clipboard___2025년_6월_30일_오후_1시_48분 {
+        internal static System.Drawing.Bitmap deu_logo {
             get {
-                object obj = ResourceManager.GetObject("Clipboard - 2025년 6월 30일 오후 1시 48분", resourceCulture);
+                object obj = ResourceManager.GetObject("deu_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace library_support_system.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap free_icon_power_switch_4139573 {
+        internal static System.Drawing.Bitmap exit_logo {
             get {
-                object obj = ResourceManager.GetObject("free-icon-power-switch-4139573", resourceCulture);
+                object obj = ResourceManager.GetObject("exit_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace library_support_system.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap free_icon_power_switch_4139573__1_ {
+        internal static System.Drawing.Bitmap exit_logo1 {
             get {
-                object obj = ResourceManager.GetObject("free-icon-power-switch-4139573 (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("exit_logo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,19 +93,9 @@ namespace library_support_system.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static System.Drawing.Bitmap img {
+        internal static System.Drawing.Bitmap search_logo {
             get {
-                object obj = ResourceManager.GetObject("img", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
-        /// </summary>
-        internal static System.Drawing.Bitmap 다운로드 {
-            get {
-                object obj = ResourceManager.GetObject("다운로드", resourceCulture);
+                object obj = ResourceManager.GetObject("search_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
