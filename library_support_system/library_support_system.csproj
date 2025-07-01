@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\다운로드.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clipboard - 2025년 6월 30일 오후 1시 48분.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-power-switch-4139573.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-power-switch-4139573 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
