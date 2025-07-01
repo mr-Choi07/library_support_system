@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="book_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="book_check.Designer.cs">
+      <DependentUpon>book_check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="book_enroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="book_enroll.Designer.cs">
+      <DependentUpon>book_enroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="book_rental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="book_rental.Designer.cs">
+      <DependentUpon>book_rental.cs</DependentUpon>
+    </Compile>
+    <Compile Include="book_return.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="book_return.Designer.cs">
+      <DependentUpon>book_return.cs</DependentUpon>
+    </Compile>
     <Compile Include="home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +78,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="user_check.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_check.Designer.cs">
+      <DependentUpon>user_check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user_register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user_register.Designer.cs">
+      <DependentUpon>user_register.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="book_check.resx">
+      <DependentUpon>book_check.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.cs</DependentUpon>
     </EmbeddedResource>
@@ -67,6 +106,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="user_register.resx">
+      <DependentUpon>user_register.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
