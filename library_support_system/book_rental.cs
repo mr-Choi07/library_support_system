@@ -16,5 +16,10 @@ namespace library_support_system
         {
             InitializeComponent();
         }
+
+        private void book_rental_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
