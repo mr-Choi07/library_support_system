@@ -1,14 +1,19 @@
-﻿using Oracle.ManagedDataAccess.Client;
+﻿using System.Configuration;
 using System.Data;
+using Oracle.ManagedDataAccess.Client;
 
-namespace library_support_system
+namespace IFW.Data
 {
-
     public class OracleProcedureHelper
     {
-        private string connectionString = "Data Source=localhost:1521/xe;User ID=system;Password=1234;";
+        private readonly string connectionString;
 
-        // 프로시저 호출 및 결과 DataTable 반환 (OUT 커서 사용)
+        public OracleProcedureHelper()
+        {
+            connectionString = ConfigurationManager.ConnectionStrings["OracleDb"].ConnectionString;
+        }
+
+        // OUT 커서 반환 프로시저 호출
         public DataTable ExecuteProcedureWithCursor(string procName, params OracleParameter[] parameters)
         {
             using (var conn = new OracleConnection(connectionString))
@@ -20,7 +25,7 @@ namespace library_support_system
                     if (parameters != null && parameters.Length > 0)
                         cmd.Parameters.AddRange(parameters);
 
-                    // 커서 파라미터 추가 (필요시)
+                    // OUT 커서 파라미터 추가
                     var cursor = new OracleParameter("OUT_CURSOR", OracleDbType.RefCursor, ParameterDirection.Output);
                     cmd.Parameters.Add(cursor);
 
@@ -34,7 +39,7 @@ namespace library_support_system
             }
         }
 
-        // 프로시저 호출(결과값 없는 경우)
+        // 결과값 없는 프로시저 호출
         public int ExecuteProcedureNonQuery(string procName, params OracleParameter[] parameters)
         {
             using (var conn = new OracleConnection(connectionString))
