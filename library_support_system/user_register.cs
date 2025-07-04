@@ -7,16 +7,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IFW.Data;
 
 namespace library_support_system
 {
     public partial class user_register : Form
     {
-        public user_register()
+        private void user_register_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
+            retrieve();
         }
 
+        #region Method
+        private void retrieve()
+        {
+            string connectionString = "YOUR_ORACLE_CONNECTION_STRING_HERE";
+
+            using (var shell = new DataCommandShell(connectionString))
+            {
+                var p = new DataParameterCollection();
+                p.Add(new DataParameter("@user_id", SqlDbType.NVarChar, 50, "test_user"));
+
+                shell.SetSpCommand("USP_회원정보조회", DbCommandType.ExecuteQuery, p);
+
+                var results = shell.Execute();
+
+                if (shell.ErrorCode != 0)
+                {
+                    MessageBox.Show("오류 발생: " + shell.ErrorMessage);
+                    return;
+                }
+
+                // 결과 사용 예시
+                var resultDataSet = results[0].DataSet;
+                if (resultDataSet != null && resultDataSet.Tables.Count > 0)
+                {
+                    DataTable table = resultDataSet.Tables[0];
+                    // 예: DataGridView에 바인딩
+                  
+                }
+            }
+        }
+        #endregion
+
+        #region Event
         private void exit_button_Click(object sender, EventArgs e)
         {
         var result = MessageBox.Show(
@@ -32,7 +66,6 @@ namespace library_support_system
             }
             // 아니요: 아무 동작 없음 (그냥 복귀)
         }
-
         private void pictureBoxUpload_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -46,7 +79,6 @@ namespace library_support_system
                 pictureBoxUpload.SizeMode = PictureBoxSizeMode.StretchImage; // 또는 Zoom
             }
         }
-
         private void cancel_button_Click(object sender, EventArgs e)
         {
         var result = MessageBox.Show(
@@ -62,5 +94,10 @@ namespace library_support_system
             }
             // 아니요: 아무 동작 없음 (그냥 복귀)
         }
+        #endregion
+
+        #region GridEvent   
+        #endregion
+
     }
 }

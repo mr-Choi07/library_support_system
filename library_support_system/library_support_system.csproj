@@ -176,5 +176,11 @@
   <ItemGroup>
     <None Include="Resources\free-icon-power-switch-4139573 %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IFW.DATA\IFW.Data.csproj">
+      <Project>{8d481bd9-c1e2-4471-95fa-4276fbf143a3}</Project>
+      <Name>IFW.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
