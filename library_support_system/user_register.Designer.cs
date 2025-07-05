@@ -291,7 +291,6 @@
             this.Name = "user_register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "회원 등록";
-            this.Load += new System.EventHandler(this.user_register_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deu_logo)).EndInit();

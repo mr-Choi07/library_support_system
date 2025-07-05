@@ -18,10 +18,6 @@ namespace library_support_system
             InitializeComponent();
         }
        
-        private void user_register_Load(object sender, EventArgs e)
-        {
-            InitializeComponent();
-        }
 
         #region Method
 
