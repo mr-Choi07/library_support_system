@@ -13,41 +13,18 @@ namespace library_support_system
 {
     public partial class user_register : Form
     {
+        public user_register()
+        {
+            InitializeComponent();
+        }
+       
         private void user_register_Load(object sender, EventArgs e)
         {
-            retrieve();
+            InitializeComponent();
         }
 
         #region Method
-        private void retrieve()
-        {
-            string connectionString = "YOUR_ORACLE_CONNECTION_STRING_HERE";
 
-            using (var shell = new DataCommandShell(connectionString))
-            {
-                var p = new DataParameterCollection();
-                p.Add(new DataParameter("@user_id", SqlDbType.NVarChar, 50, "test_user"));
-
-                shell.SetSpCommand("USP_회원정보조회", DbCommandType.ExecuteQuery, p);
-
-                var results = shell.Execute();
-
-                if (shell.ErrorCode != 0)
-                {
-                    MessageBox.Show("오류 발생: " + shell.ErrorMessage);
-                    return;
-                }
-
-                // 결과 사용 예시
-                var resultDataSet = results[0].DataSet;
-                if (resultDataSet != null && resultDataSet.Tables.Count > 0)
-                {
-                    DataTable table = resultDataSet.Tables[0];
-                    // 예: DataGridView에 바인딩
-                  
-                }
-            }
-        }
         #endregion
 
         #region Event
