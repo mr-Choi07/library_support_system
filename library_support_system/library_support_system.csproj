@@ -105,6 +105,7 @@
     <Compile Include="book_return.Designer.cs">
       <DependentUpon>book_return.cs</DependentUpon>
     </Compile>
+    <Compile Include="FontManager.cs" />
     <Compile Include="home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +163,7 @@
     <None Include="Main.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\BMHANNAPro.ttf" />
     <None Include="Resources\img.jpg" />
   </ItemGroup>
   <ItemGroup>

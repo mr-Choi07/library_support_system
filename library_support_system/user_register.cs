@@ -62,5 +62,10 @@ namespace library_support_system
             }
             // 아니요: 아무 동작 없음 (그냥 복귀)
         }
+
+        private void gender_combobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

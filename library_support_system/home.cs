@@ -66,7 +66,7 @@ private bool isHome = true;            // 현재 홈 상태 여부
         private const int PANEL_HEIGHT = 140; // 패널 펼칠 때 높이
         private void home_Load(object sender, EventArgs e)
         {
-
+            this.AutoScaleMode = AutoScaleMode.None;
         }
         private void exit_button_Click(object sender, EventArgs e)
         {
@@ -112,7 +112,7 @@ private bool isHome = true;            // 현재 홈 상태 여부
 
         private void main_panel_Paint(object sender, PaintEventArgs e)
         {
-
+            this.AutoScaleMode = AutoScaleMode.None;
         }
 
         private void book_check_button_Click(object sender, EventArgs e)
@@ -163,6 +163,7 @@ private bool isHome = true;            // 현재 홈 상태 여부
 
         private void book_rental_button_Click(object sender, EventArgs e)
         {
+            Font font1 = new Font(FontManager.fontFamilys[0], 12, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             labelCurrentMenu1.Text = labelCurrentMenu2.Text = "도서대여";
             book_rental form = new book_rental();
             form.TopLevel = false;
