@@ -1,4 +1,6 @@
-﻿using System;
+﻿using library_support_system.Presenters;
+using library_support_system.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,10 @@ namespace library_support_system
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new home());
+
+            IHomeView view = new HomeView();
+            HomePresenter presenter = new HomePresenter(view);
+            Application.Run((Form)view); // 똑같은 view 인스턴스 사용!
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace library_support_system
+﻿namespace library_support_system.Views
 {
-    partial class home
+    partial class HomeView
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(home));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeView));
             this.home_label = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rental_panel = new System.Windows.Forms.Panel();
@@ -38,7 +38,7 @@
             this.rental_button = new System.Windows.Forms.Button();
             this.account_panel = new System.Windows.Forms.Panel();
             this.user_check_button = new System.Windows.Forms.Button();
-            this.user_register_button = new System.Windows.Forms.Button();
+            this.btnUserRes = new System.Windows.Forms.Button();
             this.account_button = new System.Windows.Forms.Button();
             this.book_panel = new System.Windows.Forms.Panel();
             this.book_check_button = new System.Windows.Forms.Button();
@@ -152,7 +152,7 @@
             // account_panel
             // 
             this.account_panel.Controls.Add(this.user_check_button);
-            this.account_panel.Controls.Add(this.user_register_button);
+            this.account_panel.Controls.Add(this.btnUserRes);
             this.account_panel.Location = new System.Drawing.Point(0, 336);
             this.account_panel.Name = "account_panel";
             this.account_panel.Size = new System.Drawing.Size(150, 141);
@@ -171,18 +171,17 @@
             this.user_check_button.UseVisualStyleBackColor = false;
             this.user_check_button.Click += new System.EventHandler(this.user_check_button_Click);
             // 
-            // user_register_button
+            // btnUserRes
             // 
-            this.user_register_button.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.user_register_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.user_register_button.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.user_register_button.Location = new System.Drawing.Point(0, 67);
-            this.user_register_button.Name = "user_register_button";
-            this.user_register_button.Size = new System.Drawing.Size(150, 70);
-            this.user_register_button.TabIndex = 3;
-            this.user_register_button.Text = "회원등록";
-            this.user_register_button.UseVisualStyleBackColor = false;
-            this.user_register_button.Click += new System.EventHandler(this.user_register_button_Click);
+            this.btnUserRes.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnUserRes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserRes.Font = new System.Drawing.Font("배달의민족 한나체 Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnUserRes.Location = new System.Drawing.Point(0, 67);
+            this.btnUserRes.Name = "btnUserRes";
+            this.btnUserRes.Size = new System.Drawing.Size(150, 70);
+            this.btnUserRes.TabIndex = 3;
+            this.btnUserRes.Text = "회원등록";
+            this.btnUserRes.UseVisualStyleBackColor = false;
             // 
             // account_button
             // 
@@ -459,7 +458,7 @@
         private System.Windows.Forms.Button book_rental_button;
         private System.Windows.Forms.Button book_return_button;
         private System.Windows.Forms.Button user_check_button;
-        private System.Windows.Forms.Button user_register_button;
+        private System.Windows.Forms.Button btnUserRes;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel main_panel;
         private System.Windows.Forms.Label labelCurrentMenu1;

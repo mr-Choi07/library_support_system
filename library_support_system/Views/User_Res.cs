@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using IFW.Data;
+using library_support_system.Views;
 
 namespace library_support_system
 {
-    public partial class user_register : Form
+    public partial class User_Res : Form ,IUser_Res
     {
-        public user_register()
+        public User_Res()
         {
             InitializeComponent();
         }
