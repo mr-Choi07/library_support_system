@@ -1,4 +1,4 @@
-﻿ using System.Configuration; // 추가
+﻿using System.Configuration; // 추가
 using Oracle.ManagedDataAccess.Client;
 using System.Data;
 
