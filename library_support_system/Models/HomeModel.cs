@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace library_support_system.Model
 {
-    internal class 모델정의
+    internal class HomeModel
     {
     }
 }

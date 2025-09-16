@@ -105,8 +105,8 @@
     <Compile Include="book_return.Designer.cs">
       <DependentUpon>book_return.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\I모델정의.cs" />
-    <Compile Include="Models\모델정의.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Presenters\HomePresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
