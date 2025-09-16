@@ -4,6 +4,7 @@ using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Configuration;
 
 namespace library_support_system.Repositories
 {
@@ -13,7 +14,7 @@ namespace library_support_system.Repositories
 
         public RentalRepository()
         {
-            string connStr = "Data Source=(...);User Id=...;Password=...;"; // 실제 정보로 교체
+            string connStr = ConfigurationManager.ConnectionStrings["OracleDb"].ConnectionString;
             _conn = new OracleConnection(connStr);
             _conn.Open();
         }

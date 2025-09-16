@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using Oracle.ManagedDataAccess.Client;
 using library_support_system.Models;
+using System.Configuration;
 
 namespace library_support_system.Repositories
 {
@@ -12,7 +13,8 @@ namespace library_support_system.Repositories
 
         public BookRepository()
         {
-            string connStr = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=deu.duraka.shop)(PORT=4263))(CONNECT_DATA=(SERVICE_NAME=xe)));User Id=TEAM1_WEEK2;Password=Team1Tris_WEEK2;";
+            // app.config에서 커넥션 문자열 읽기
+            string connStr = ConfigurationManager.ConnectionStrings["OracleDb"].ConnectionString;
             _conn = new OracleConnection(connStr);
             _conn.Open();
         }
