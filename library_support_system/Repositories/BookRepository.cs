@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Data;
-using Oracle.ManagedDataAccess.Client;
-using library_support_system.Models;
 using System.Configuration;
+using System.Collections.Generic;
+using library_support_system.Models;
 
 namespace library_support_system.Repositories
 {

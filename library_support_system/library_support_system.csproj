@@ -112,6 +112,7 @@
     <Compile Include="Models\RentalModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Presenters\HomePresenter.cs" />
+    <Compile Include="Presenters\UserResPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BookRepository.cs" />

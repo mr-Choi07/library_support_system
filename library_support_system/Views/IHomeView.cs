@@ -9,7 +9,7 @@ namespace library_support_system.Views
     public interface IHomeView
     {
         #region Properties
-        string Name { get; }
+       
         #endregion
 
         #region Events

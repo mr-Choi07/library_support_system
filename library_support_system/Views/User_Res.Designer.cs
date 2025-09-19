@@ -85,7 +85,6 @@
             this.exit_button.Size = new System.Drawing.Size(54, 54);
             this.exit_button.TabIndex = 0;
             this.exit_button.UseVisualStyleBackColor = false;
-            this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
             // deu_logo
             // 
@@ -210,7 +209,7 @@
             this.pictureBoxUpload.Size = new System.Drawing.Size(100, 130);
             this.pictureBoxUpload.TabIndex = 16;
             this.pictureBoxUpload.TabStop = false;
-            this.pictureBoxUpload.Click += new System.EventHandler(this.pictureBoxUpload_Click);
+
             // 
             // comboBox1
             // 
@@ -259,7 +258,6 @@
             this.cancel_button.TabIndex = 21;
             this.cancel_button.Text = "취소";
             this.cancel_button.UseVisualStyleBackColor = false;
-            this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
             // 
             // user_register
             // 

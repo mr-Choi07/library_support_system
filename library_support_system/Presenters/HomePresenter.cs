@@ -25,8 +25,9 @@ namespace library_support_system.Presenters
         //회원등록 팝업 함수
         private void OpenUserRes(object sender, EventArgs e)
         {
-            User_Res popup = new User_Res();
-            popup.ShowDialog();
+            IUser_Res userResView = new User_Res();
+            UserResPresenter userResPresenter = new UserResPresenter(userResView);
+            ((Form)userResView).ShowDialog();  // 팝업 실행
         }
 
     }
