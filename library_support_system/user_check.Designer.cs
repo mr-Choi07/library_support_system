@@ -32,10 +32,11 @@
             // 
             // user_check
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1099, 588);
+            this.ClientSize = new System.Drawing.Size(1274, 784);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "user_check";
             this.Text = "user_check";
             this.Load += new System.EventHandler(this.user_check_Load);
