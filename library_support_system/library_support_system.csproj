@@ -140,8 +140,14 @@
     <EmbeddedResource Include="book_check.resx">
       <DependentUpon>book_check.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="book_enroll.resx">
+      <DependentUpon>book_enroll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="book_rental.resx">
       <DependentUpon>book_rental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="book_return.resx">
+      <DependentUpon>book_return.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -153,6 +159,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="user_check.resx">
+      <DependentUpon>user_check.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\User_Res.resx">
       <DependentUpon>User_Res.cs</DependentUpon>
     </EmbeddedResource>
