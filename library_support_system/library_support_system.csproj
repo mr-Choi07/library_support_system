@@ -84,30 +84,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="book_check.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="book_check.Designer.cs">
-      <DependentUpon>book_check.cs</DependentUpon>
-    </Compile>
-    <Compile Include="book_enroll.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="book_enroll.Designer.cs">
-      <DependentUpon>book_enroll.cs</DependentUpon>
-    </Compile>
-    <Compile Include="book_rental.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="book_rental.Designer.cs">
-      <DependentUpon>book_rental.cs</DependentUpon>
-    </Compile>
-    <Compile Include="book_return.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="book_return.Designer.cs">
-      <DependentUpon>book_return.cs</DependentUpon>
-    </Compile>
     <Compile Include="Models\BookModel.cs" />
     <Compile Include="Models\RentalModel.cs" />
     <Compile Include="Models\UserModel.cs" />
@@ -117,12 +93,6 @@
     <Compile Include="Repositories\BookRepository.cs" />
     <Compile Include="Repositories\RentalRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
-    <Compile Include="user_check.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="user_check.Designer.cs">
-      <DependentUpon>user_check.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\IUser_Res.cs" />
     <Compile Include="Views\User_Res.cs">
       <SubType>Form</SubType>
@@ -137,12 +107,6 @@
       <DependentUpon>HomeView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\IHomeView.cs" />
-    <EmbeddedResource Include="book_check.resx">
-      <DependentUpon>book_check.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="book_rental.resx">
-      <DependentUpon>book_rental.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
