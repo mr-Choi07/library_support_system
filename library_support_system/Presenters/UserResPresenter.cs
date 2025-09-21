@@ -1,11 +1,13 @@
-﻿using System;
+﻿using library_support_system.Model;
+using library_support_system.Repositories;
+using library_support_system.Views;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
 using System.Windows.Forms;
-using library_support_system.Views;
 
 namespace library_support_system.Presenters
 {
@@ -13,6 +15,7 @@ namespace library_support_system.Presenters
     {
         #region Fields
         private readonly IUser_Res view;
+        private readonly UserRepository userRepository;
         #endregion
 
         public UserResPresenter(IUser_Res view)
@@ -21,6 +24,7 @@ namespace library_support_system.Presenters
 
             //우측 위 종료 버튼
             this.view.ExitUserRes += exit_button_Click;
+            this.view.btnSave_Click += btnSave_Click;
             //취소 버튼
             this.view.btnCancel_Click += cancel_button_Click;
             //사진 업로드
@@ -70,6 +74,31 @@ namespace library_support_system.Presenters
             {
                 view.pictureBoxUpload.Image = Image.FromFile(dialog.FileName);
                 view.pictureBoxUpload.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            UserModel newUser = new UserModel
+            {
+                 User_Phone = view.UserPhone
+               , User_Name = view.UserName
+               , User_Birthdate = view.UserBirthdate
+               , User_Gender = view.UserGender
+               , User_Mail = view.UserMail
+               , User_Image = view.UserImage
+            };
+
+            bool result = userRepository.Create(newUser);
+
+            if (result)
+            {
+                MessageBox.Show("회원 등록 성공");
+                view.CloseView();
+            }
+            else
+            {
+                MessageBox.Show("회원 등록 실패");
             }
         }
     }

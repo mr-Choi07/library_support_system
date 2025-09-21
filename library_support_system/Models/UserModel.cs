@@ -11,7 +11,7 @@ namespace library_support_system.Model
         #region Properties
         public string User_Phone { get; set; }
         public string User_Name { get; set; }
-        public DateTime User_Birthdate { get; set; }
+        public string User_Birthdate { get; set; }
         public int User_Gender { get; set; } = 0;
         public string User_Mail { get; set; }
         public string User_Image { get; set; }

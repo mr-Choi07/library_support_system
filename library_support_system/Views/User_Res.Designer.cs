@@ -33,20 +33,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.exit_button = new System.Windows.Forms.Button();
             this.deu_logo = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtNum = new System.Windows.Forms.TextBox();
+            this.lblNum = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblBthDate = new System.Windows.Forms.Label();
+            this.txtBthDate = new System.Windows.Forms.TextBox();
+            this.lblGen = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.pictureBoxUpload = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cmbGen = new System.Windows.Forms.ComboBox();
+            this.lblPictureBox = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
             this.cancel_button = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deu_logo)).BeginInit();
@@ -95,28 +95,25 @@
             this.deu_logo.TabIndex = 4;
             this.deu_logo.TabStop = false;
             // 
-            // textBox1
+            // 전화번호 로직
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox1.Location = new System.Drawing.Point(100, 116);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 25);
-            this.textBox1.TabIndex = 5;
+            this.lblNum.AutoSize = true;
+            this.lblNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblNum.Location = new System.Drawing.Point(100, 92);
+            this.lblNum.Name = "lblNum";
+            this.lblNum.Size = new System.Drawing.Size(70, 24);
+            this.lblNum.TabIndex = 6;
+            this.lblNum.Text = "전화번호";
+
+            this.txtNum.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNum.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtNum.Location = new System.Drawing.Point(100, 116);
+            this.txtNum.Multiline = true;
+            this.txtNum.Name = "txtNum";
+            this.txtNum.Size = new System.Drawing.Size(263, 25);
+            this.txtNum.TabIndex = 5;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(100, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 24);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "전화번호";
-            // 
-            // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -128,78 +125,78 @@
             this.button1.Text = "중복확인";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // lblName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(100, 182);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 24);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "이름";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblName.Location = new System.Drawing.Point(100, 182);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(40, 24);
+            this.lblName.TabIndex = 9;
+            this.lblName.Text = "이름";
+            
+            this.txtName.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtName.Location = new System.Drawing.Point(100, 206);
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(263, 25);
+            this.txtName.TabIndex = 8;
             // 
-            // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox2.Location = new System.Drawing.Point(100, 206);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(263, 25);
-            this.textBox2.TabIndex = 8;
             // 
-            // label4
+            // lblBthDate
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(100, 272);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 24);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "생년월일";
+            this.lblBthDate.AutoSize = true;
+            this.lblBthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblBthDate.Location = new System.Drawing.Point(100, 272);
+            this.lblBthDate.Name = "lblBthDate";
+            this.lblBthDate.Size = new System.Drawing.Size(70, 24);
+            this.lblBthDate.TabIndex = 11;
+            this.lblBthDate.Text = "생년월일";
             // 
-            // textBox3
+            // txtBthDate
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox3.Location = new System.Drawing.Point(100, 296);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(263, 25);
-            this.textBox3.TabIndex = 10;
+            this.txtBthDate.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtBthDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBthDate.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtBthDate.Location = new System.Drawing.Point(100, 296);
+            this.txtBthDate.Multiline = true;
+            this.txtBthDate.Name = "txtBthDate";
+            this.txtBthDate.Size = new System.Drawing.Size(263, 25);
+            this.txtBthDate.TabIndex = 10;
             // 
-            // label5
+            // lblGen
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(100, 362);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 24);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "성별";
+            this.lblGen.AutoSize = true;
+            this.lblGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblGen.Location = new System.Drawing.Point(100, 362);
+            this.lblGen.Name = "lblGen";
+            this.lblGen.Size = new System.Drawing.Size(40, 24);
+            this.lblGen.TabIndex = 13;
+            this.lblGen.Text = "성별";
             // 
-            // label6
+            // lblEmail
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(100, 452);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 24);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "이메일";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblEmail.Location = new System.Drawing.Point(100, 452);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(55, 24);
+            this.lblEmail.TabIndex = 15;
+            this.lblEmail.Text = "이메일";
             // 
-            // textBox5
+            // txtEmail
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox5.Location = new System.Drawing.Point(100, 476);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(263, 25);
-            this.textBox5.TabIndex = 14;
+            this.txtEmail.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtEmail.Location = new System.Drawing.Point(100, 476);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(263, 25);
+            this.txtEmail.TabIndex = 14;
             // 
             // pictureBoxUpload
             // 
@@ -209,43 +206,42 @@
             this.pictureBoxUpload.Size = new System.Drawing.Size(100, 130);
             this.pictureBoxUpload.TabIndex = 16;
             this.pictureBoxUpload.TabStop = false;
-
             // 
-            // comboBox1
+            // cmbGen
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbGen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbGen.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.cmbGen.FormattingEnabled = true;
+            this.cmbGen.Items.AddRange(new object[] {
             "",
             "남",
             "여"});
-            this.comboBox1.Location = new System.Drawing.Point(104, 386);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 29);
-            this.comboBox1.TabIndex = 18;
+            this.cmbGen.Location = new System.Drawing.Point(104, 386);
+            this.cmbGen.Name = "cmbGen";
+            this.cmbGen.Size = new System.Drawing.Size(121, 29);
+            this.cmbGen.TabIndex = 18;
             // 
-            // label7
+            // lblPictureBox
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label7.Location = new System.Drawing.Point(206, 624);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(170, 48);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "박스를 클릭하여 \r\n이미지를 추가하십시오.​";
+            this.lblPictureBox.AutoSize = true;
+            this.lblPictureBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblPictureBox.Location = new System.Drawing.Point(206, 624);
+            this.lblPictureBox.Name = "lblPictureBox";
+            this.lblPictureBox.Size = new System.Drawing.Size(170, 48);
+            this.lblPictureBox.TabIndex = 19;
+            this.lblPictureBox.Text = "박스를 클릭하여 \r\n이미지를 추가하십시오.​";
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button2.Location = new System.Drawing.Point(125, 712);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 30);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "저장";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnSave.Location = new System.Drawing.Point(125, 712);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(100, 30);
+            this.btnSave.TabIndex = 20;
+            this.btnSave.Text = "저장";
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // cancel_button
             // 
@@ -259,34 +255,34 @@
             this.cancel_button.Text = "취소";
             this.cancel_button.UseVisualStyleBackColor = false;
             // 
-            // user_register
+            // User_Res
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 761);
             this.ControlBox = false;
             this.Controls.Add(this.cancel_button);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.lblPictureBox);
+            this.Controls.Add(this.cmbGen);
             this.Controls.Add(this.pictureBoxUpload);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblGen);
+            this.Controls.Add(this.lblBthDate);
+            this.Controls.Add(this.txtBthDate);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lblNum);
+            this.Controls.Add(this.txtNum);
             this.Controls.Add(this.deu_logo);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "user_register";
+            this.Name = "User_Res";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "회원 등록";
             this.panel3.ResumeLayout(false);
@@ -304,20 +300,20 @@
         private System.Windows.Forms.Button exit_button;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox deu_logo;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtNum;
+        private System.Windows.Forms.Label lblNum;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label lblBthDate;
+        private System.Windows.Forms.TextBox txtBthDate;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblGen;
+        private System.Windows.Forms.ComboBox cmbGen;
+        private System.Windows.Forms.Label lblPictureBox;
         private System.Windows.Forms.PictureBox pictureBoxUpload;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button cancel_button;
     }
 }

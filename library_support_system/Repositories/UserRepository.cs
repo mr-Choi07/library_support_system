@@ -55,7 +55,6 @@ namespace library_support_system.Repositories
                         {
                             User_Phone = reader["User_Phone"].ToString(),
                             User_Name = reader["User_Name"].ToString(),
-                            User_Birthdate = Convert.ToDateTime(reader["User_Birthdate"]),
                             User_Gender = Convert.ToInt32(reader["User_Gender"]),
                             User_Mail = reader["User_Mail"].ToString(),
                             User_Image = reader["User_Image"].ToString(),
@@ -82,7 +81,6 @@ namespace library_support_system.Repositories
                         {
                             User_Phone = reader["User_Phone"].ToString(),
                             User_Name = reader["User_Name"].ToString(),
-                            User_Birthdate = Convert.ToDateTime(reader["User_Birthdate"]),
                             User_Gender = Convert.ToInt32(reader["User_Gender"]),
                             User_Mail = reader["User_Mail"].ToString(),
                             User_Image = reader["User_Image"].ToString(),
