@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,56 +14,103 @@ namespace library_support_system.Views
 
     public partial class HomeView : Form, IHomeView
     {
+        #region 전역변수
+        public string CurrentMenu1Text { set => labelCurrentMenu1.Text = value; }
+        public string CurrentMenu2Text { set => labelCurrentMenu2.Text = value; }
+        #endregion
+        //디자인 요소
+        private const int PANEL_HEIGHT = 140; // 패널 펼칠 때 높이
         private int bookPanelOriginalHeight;
         private int accountPanelOriginalHeight;
         private int rentalPanelOriginalHeight;
         private Control previousScreen = null; // 이전 화면 저장
         private bool isHome = true;            // 현재 홈 상태 여부
+        public void ToggleAccountPanel() => TogglePanel(account_panel);
+        public void ToggleBookPanel() => TogglePanel(book_panel);
+        public void ToggleRentalPanel() => TogglePanel(rental_panel);
+
+        public event EventHandler BookMenu;
+        public event EventHandler UserMenu;
+        public event EventHandler RentalMenu;
 
         public event EventHandler OpenUserRes;
+        public event EventHandler OpenUserRetrieve;
+        public event EventHandler OpenBookRes;
+        public event EventHandler OpenBookRetrieve;
+        public event EventHandler OpenBookRental;
+        public event EventHandler OpenBookReturn;
+        public event EventHandler ExitProgram;
 
         public HomeView()
         {
             InitializeComponent();
 
             btnUserRes.Click += (sender, e) => OpenUserRes?.Invoke(sender, e);
-        }
-        private const int PANEL_HEIGHT = 140; // 패널 펼칠 때 높이
-
-        #region Event
-        #endregion
-
-        #region Method
-        private void exit_button_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        private void TogglePanel(Panel panelToToggle)
-        {
-            if (panelToToggle.Height == 0)
-                panelToToggle.Height = PANEL_HEIGHT;
-            else
-                panelToToggle.Height = 0;
+            user_check_button.Click += (sender, e) => OpenUserRetrieve?.Invoke(sender, e);
+            book_enroll_button.Click += (sender, e) => OpenBookRes?.Invoke(sender, e);
+            book_check_button.Click += (sender, e) => OpenBookRetrieve?.Invoke(sender, e);
+            book_rental_button.Click += (sender, e) => OpenBookRental?.Invoke(sender, e);
+            book_return_button.Click += (sender, e) => OpenBookReturn?.Invoke(sender, e);
+            exit_button.Click += (sender, e) => ExitProgram?.Invoke(sender, e);
         }
         private void home_Load(object sender, EventArgs e)
         {
+            // 각 버튼에 이벤트 연결 (이미 연결했다면 중복 X)
+            book_button.Click += (s, ev) => FlyoutPanelToggle(book_panel);
+            account_button.Click += (s, ev) => FlyoutPanelToggle(account_panel);
+            rental_button.Click += (s, ev) => FlyoutPanelToggle(rental_panel);
+        }
+        #region Method
+        private void FlyoutPanelToggle(Panel panelToToggle)
+        {
+            bool isExpanded = panelToToggle.Height > 0;
 
+            panelToToggle.Height = isExpanded ? 0 : PANEL_HEIGHT;
+
+            // 토글에 따라 버튼 위치 및 패널 위치는 아래와 같이 재조정    
+            List<(Button button, Panel panel)> items = new List<(Button, Panel)>
+            {
+                (book_button, book_panel),
+                (account_button, account_panel),
+                (rental_button, rental_panel)
+            };
+
+            int startY = book_button.Top;
+
+            int currentY = startY;
+            foreach (var item in items)
+            {
+                item.button.Top = currentY;
+                currentY += item.button.Height;
+
+                item.panel.Top = currentY;
+                currentY += item.panel.Height;
+            }
+
+            this.PerformLayout();
+            this.Refresh();
         }
-        private void book_button_Click(object sender, EventArgs e)
+        public void ShowChildForm(Form form) //탭이동 동적으로 시켜주는 메서드
         {
-            TogglePanel(book_panel);
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            main_panel.Controls.Clear(); // 기존 화면 제거
+            main_panel.Controls.Add(form);
+            form.Show();
         }
-        private void account_button_Click(object sender, EventArgs e)
+        #endregion
+
+        #region Event
+
+        private void TogglePanel(Panel panelToToggle)
         {
-            TogglePanel(account_panel);
+            panelToToggle.Visible = !panelToToggle.Visible;
         }
-        private void rental_button_Click(object sender, EventArgs e)
-        {
-            TogglePanel(rental_panel);
-        }
+
         private void home_button_Click(object sender, EventArgs e)
         {
-            
+
         }
         private void home_label_Click(object sender, EventArgs e)
         {
@@ -72,70 +120,7 @@ namespace library_support_system.Views
         {
             home_button.PerformClick();
         }
-        private void main_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void book_check_button_Click(object sender, EventArgs e)
-        {
-            labelCurrentMenu1.Text = labelCurrentMenu2.Text = "도서조회";
-            book_check form = new book_check();
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-
-            main_panel.Controls.Clear();    // 이전 화면 제거
-            main_panel.Controls.Add(form);
-            form.Show();
-        }
-        private void book_enroll_button_Click(object sender, EventArgs e)
-        {
-            labelCurrentMenu1.Text = labelCurrentMenu2.Text = "도서등록";
-            book_enroll form = new book_enroll();
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-
-            main_panel.Controls.Clear();    // 이전 화면 제거
-            main_panel.Controls.Add(form);
-            form.Show();
-        }
-        private void user_check_button_Click(object sender, EventArgs e)
-        {
-            labelCurrentMenu1.Text = labelCurrentMenu2.Text = "회원조회";
-            user_check form = new user_check();
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-
-            main_panel.Controls.Clear();    // 이전 화면 제거
-            main_panel.Controls.Add(form);
-            form.Show();
-        }
-        private void book_rental_button_Click(object sender, EventArgs e)
-        {
-            labelCurrentMenu1.Text = labelCurrentMenu2.Text = "도서대여";
-            book_rental form = new book_rental();
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-
-            main_panel.Controls.Clear();    // 이전 화면 제거
-            main_panel.Controls.Add(form);
-            form.Show();
-        }
-        private void book_return_button_Click(object sender, EventArgs e)
-        {
-            labelCurrentMenu1.Text = labelCurrentMenu2.Text = "도서반납";
-            book_return form = new book_return();
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-
-            main_panel.Controls.Clear();    // 이전 화면 제거
-            main_panel.Controls.Add(form);
-            form.Show();
-        }
         #endregion
+
     }
 }

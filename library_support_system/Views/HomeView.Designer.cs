@@ -119,7 +119,6 @@
             this.book_rental_button.TabIndex = 6;
             this.book_rental_button.Text = "도서대여";
             this.book_rental_button.UseVisualStyleBackColor = false;
-            this.book_rental_button.Click += new System.EventHandler(this.book_rental_button_Click);
             // 
             // book_return_button
             // 
@@ -132,7 +131,6 @@
             this.book_return_button.TabIndex = 5;
             this.book_return_button.Text = "도서반납";
             this.book_return_button.UseVisualStyleBackColor = false;
-            this.book_return_button.Click += new System.EventHandler(this.book_return_button_Click);
             // 
             // rental_button
             // 
@@ -147,7 +145,6 @@
             this.rental_button.TabIndex = 7;
             this.rental_button.Text = "대여관리";
             this.rental_button.UseVisualStyleBackColor = false;
-            this.rental_button.Click += new System.EventHandler(this.rental_button_Click);
             // 
             // account_panel
             // 
@@ -169,7 +166,6 @@
             this.user_check_button.TabIndex = 4;
             this.user_check_button.Text = "회원조회";
             this.user_check_button.UseVisualStyleBackColor = false;
-            this.user_check_button.Click += new System.EventHandler(this.user_check_button_Click);
             // 
             // btnUserRes
             // 
@@ -196,7 +192,6 @@
             this.account_button.TabIndex = 5;
             this.account_button.Text = "회원관리";
             this.account_button.UseVisualStyleBackColor = false;
-            this.account_button.Click += new System.EventHandler(this.account_button_Click);
             // 
             // book_panel
             // 
@@ -218,7 +213,6 @@
             this.book_check_button.TabIndex = 2;
             this.book_check_button.Text = "도서조회";
             this.book_check_button.UseVisualStyleBackColor = false;
-            this.book_check_button.Click += new System.EventHandler(this.book_check_button_Click);
             // 
             // book_enroll_button
             // 
@@ -231,7 +225,6 @@
             this.book_enroll_button.TabIndex = 1;
             this.book_enroll_button.Text = "도서등록";
             this.book_enroll_button.UseVisualStyleBackColor = false;
-            this.book_enroll_button.Click += new System.EventHandler(this.book_enroll_button_Click);
             // 
             // book_button
             // 
@@ -246,7 +239,6 @@
             this.book_button.TabIndex = 3;
             this.book_button.Text = "도서관리";
             this.book_button.UseVisualStyleBackColor = false;
-            this.book_button.Click += new System.EventHandler(this.book_button_Click);
             // 
             // panel2
             // 
@@ -321,7 +313,6 @@
             this.exit_button.Size = new System.Drawing.Size(54, 52);
             this.exit_button.TabIndex = 0;
             this.exit_button.UseVisualStyleBackColor = false;
-            this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
             // top_panel
             // 
@@ -371,7 +362,6 @@
             this.main_panel.Name = "main_panel";
             this.main_panel.Size = new System.Drawing.Size(1115, 627);
             this.main_panel.TabIndex = 0;
-            this.main_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.main_panel_Paint);
             // 
             // contextMenuStrip1
             // 
@@ -438,7 +428,6 @@
         }
 
         #endregion
-
         private System.Windows.Forms.Label home_label;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
