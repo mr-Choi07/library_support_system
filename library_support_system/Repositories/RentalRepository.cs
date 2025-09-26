@@ -25,7 +25,7 @@ namespace library_support_system.Repositories
             using (var cmd = _conn.CreateCommand())
             {
                 cmd.CommandText = @"
-                    INSERT INTO Rentals
+                    INSERT INTO BOOK_RNT
                     (Rental_Seq, Book_ISBN, User_Phone, Rental_Status, Rental_Date, Rental_Return_Date)
                     VALUES
                     (:Rental_Seq, :Book_ISBN, :User_Phone, :Rental_Status, :Rental_Date, :Rental_Return_Date)";

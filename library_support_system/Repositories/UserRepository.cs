@@ -26,16 +26,16 @@ namespace library_support_system.Repositories
             {
                 cmd.CommandText = @"
                     INSERT INTO Users
-                    (User_Phone, User_Name, User_Birthdate, User_Gender, User_Mail, User_Image, User_WithDR)
+                    (User_Phone, User_Name, User_Birthdate, User_Gender, User_Mail, User_Image, User_WTHDR)
                     VALUES
-                    (:User_Phone, :User_Name, :User_Birthdate, :User_Gender, :User_Mail, :User_Image, :User_WithDR)";
+                    (:User_Phone, :User_Name, :User_Birthdate, :User_Gender, :User_Mail, :User_Image, :User_WTHDR)";
                 cmd.Parameters.Add(new OracleParameter("User_Phone", user.User_Phone));
                 cmd.Parameters.Add(new OracleParameter("User_Name", user.User_Name));
                 cmd.Parameters.Add(new OracleParameter("User_Birthdate", user.User_Birthdate));
                 cmd.Parameters.Add(new OracleParameter("User_Gender", user.User_Gender));
                 cmd.Parameters.Add(new OracleParameter("User_Mail", user.User_Mail));
                 cmd.Parameters.Add(new OracleParameter("User_Image", user.User_Image));
-                cmd.Parameters.Add(new OracleParameter("User_WithDR", user.User_WithDR));
+                cmd.Parameters.Add(new OracleParameter("User_WTHDR", user.User_WithDR));
                 return cmd.ExecuteNonQuery() > 0;
             }
         }

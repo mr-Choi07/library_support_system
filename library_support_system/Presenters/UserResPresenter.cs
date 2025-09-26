@@ -21,6 +21,7 @@ namespace library_support_system.Presenters
         public UserResPresenter(IUser_Res view)
         {
             this.view = view;
+            this.userRepository = new UserRepository();
 
             //우측 위 종료 버튼
             this.view.ExitUserRes += exit_button_Click;
@@ -87,6 +88,7 @@ namespace library_support_system.Presenters
                , User_Gender = view.UserGender
                , User_Mail = view.UserMail
                , User_Image = view.UserImage
+               , User_WithDR = 0 // 기본값 설정
             };
 
             bool result = userRepository.Create(newUser);
