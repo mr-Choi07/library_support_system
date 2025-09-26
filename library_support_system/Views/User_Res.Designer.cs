@@ -3,7 +3,7 @@
     partial class User_Res
     {
         /// <summary>
-        /// Required designer variable.
+        /// Required designer variable. 1
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
