@@ -29,6 +29,7 @@ namespace library_support_system.Presenters
             this.view.OpenBookRetrieve += OpenBookRetrieve;
             this.view.OpenBookRental += OpenBookRental;
             this.view.OpenBookReturn += OpenBookReturn;
+            this.view.OpenHomeSearch += OpenHomeSearch;  // 홈 검색 이벤트 핸들러 추가
             this.view.ExitProgram += ExitProgram;
         }
 
@@ -82,6 +83,12 @@ namespace library_support_system.Presenters
             view.CurrentMenu1Text = "도서반납";
             view.CurrentMenu2Text = "도서반납";
             view.ShowChildForm(new book_return());
+        }
+        private void OpenHomeSearch(object sender, EventArgs e)
+        {
+            view.CurrentMenu1Text = "도서검색";
+            view.CurrentMenu2Text = "홈 검색";
+            view.ShowChildForm(new home_search());
         }
         private void ExitProgram(object sender, EventArgs e)
         {

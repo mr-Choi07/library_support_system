@@ -29,6 +29,7 @@ namespace library_support_system.Views
         event EventHandler OpenBookRetrieve;
         event EventHandler OpenBookRental;
         event EventHandler OpenBookReturn;
+        event EventHandler OpenHomeSearch;
         event EventHandler ExitProgram;
         #endregion
     }

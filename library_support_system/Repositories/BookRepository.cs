@@ -97,6 +97,35 @@ namespace library_support_system.Repositories
             return list;
         }
 
+        // SEARCH: 제목으로 도서 검색
+        public List<BookModel> SearchByTitle(string searchTitle)
+        {
+            var list = new List<BookModel>();
+            using (var cmd = _conn.CreateCommand())
+            {
+                cmd.CommandText = "SELECT * FROM Books WHERE UPPER(Book_Title) LIKE UPPER(:searchTitle)";
+                cmd.Parameters.Add(new OracleParameter("searchTitle", "%" + searchTitle + "%"));
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        list.Add(new BookModel
+                        {
+                            Book_ISBN = reader["Book_ISBN"].ToString(),
+                            Book_Title = reader["Book_Title"].ToString(),
+                            Book_Author = reader["Book_Author"].ToString(),
+                            Book_Pbl = reader["Book_Pbl"].ToString(),
+                            Book_Price = Convert.ToInt32(reader["Book_Price"]),
+                            Book_Link = reader["Book_Link"].ToString(),
+                            Book_Img = reader["Book_Img"].ToString(),
+                            Book_Explain = reader["Book_Explain"].ToString()
+                        });
+                    }
+                }
+            }
+            return list;
+        }
+
         // UPDATE: 도서 정보 수정
         public bool Update(BookModel book)
         {

@@ -20,11 +20,7 @@ namespace library_support_system.Views
         #endregion
         //디자인 요소
         private const int PANEL_HEIGHT = 140; // 패널 펼칠 때 높이
-        private int bookPanelOriginalHeight;
-        private int accountPanelOriginalHeight;
-        private int rentalPanelOriginalHeight;
-        private Control previousScreen = null; // 이전 화면 저장
-        private bool isHome = true;            // 현재 홈 상태 여부
+        
         public void ToggleAccountPanel() => TogglePanel(account_panel);
         public void ToggleBookPanel() => TogglePanel(book_panel);
         public void ToggleRentalPanel() => TogglePanel(rental_panel);
@@ -39,6 +35,7 @@ namespace library_support_system.Views
         public event EventHandler OpenBookRetrieve;
         public event EventHandler OpenBookRental;
         public event EventHandler OpenBookReturn;
+        public event EventHandler OpenHomeSearch;  // 홈 검색 이벤트 추가
         public event EventHandler ExitProgram;
 
         public HomeView()
@@ -99,6 +96,14 @@ namespace library_support_system.Views
             main_panel.Controls.Add(form);
             form.Show();
         }
+        
+        // 홈 검색 페이지 실행 메서드
+        public void ShowHomeSearch()
+        {
+            CurrentMenu1Text = "도서검색";
+            CurrentMenu2Text = "홈 검색";
+            ShowChildForm(new home_search());
+        }
         #endregion
 
         #region Event
@@ -110,7 +115,8 @@ namespace library_support_system.Views
 
         private void home_button_Click(object sender, EventArgs e)
         {
-
+            // 홈 검색 페이지 실행
+            OpenHomeSearch?.Invoke(sender, e);
         }
         private void home_label_Click(object sender, EventArgs e)
         {

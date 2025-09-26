@@ -96,6 +96,12 @@
     <Compile Include="book_enroll.Designer.cs">
       <DependentUpon>book_enroll.cs</DependentUpon>
     </Compile>
+    <Compile Include="home_search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home_search.Designer.cs">
+      <DependentUpon>home_search.cs</DependentUpon>
+    </Compile>
     <Compile Include="book_rental.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,7 @@
     <Compile Include="Models\RentalModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Presenters\HomePresenter.cs" />
+    <Compile Include="Presenters\HomeSearchPresenter.cs" />
     <Compile Include="Presenters\UserResPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -124,6 +131,7 @@
     <Compile Include="user_check.Designer.cs">
       <DependentUpon>user_check.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\IHomeSearchView.cs" />
     <Compile Include="Views\IUser_Res.cs" />
     <Compile Include="Views\User_Res.cs">
       <SubType>Form</SubType>
@@ -143,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="book_enroll.resx">
       <DependentUpon>book_enroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home_search.resx">
+      <DependentUpon>home_search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="book_rental.resx">
       <DependentUpon>book_rental.cs</DependentUpon>
